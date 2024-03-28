@@ -1,30 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Registration Form</title>
-	<link rel="stylesheet" type="text/css" href="form.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
 </head>
 <body>
-	<div class="container">
-		<h2>Registration Form</h2>
-		<form action="register.php" method="post">
-			<div class="form-group">
-				<label>Username:</label>
-				<input type="text" name="username" id="username" required>
-			</div>
-			<div class="form-group">
-				<label>Password:</label>
-				<input type="password" name="password" id="password" required>
-			</div>
-			<div class="form-group">
-				<label for="email">Email:</label>
-				<input type="email" name="email" id="email" required>
-			</div>
-			<div class="form-group">
-				<input type="submit" value="Register">
-			</div>
-		</form>
-		<p>Already have an account? <a href="login.php">Login here</a></p>
-	</div>
+    <form action="/submit" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" cols="50" required></textarea><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br>
+
+            <label for="gender">Gender:</label>
+            <label><input type="radio" name="gender" value="male" required> Male</label>
+            <label><input type="radio" name="gender" value="female" required> Female</label>
+            <label><input type="radio" name="gender" value="other" required> Other</label><br>
+
+            <label for="education">Education:</label>
+            <select id="education" name="education" required>
+                <option value="">Select education level</option>
+                <option value="high-school">High School</option>
+                <option value="bachelors">Bachelor's Degree</option>
+                <option value="masters">Master's Degree</option>
+                <option value="phd">Ph.D.</option>
+            </select><br>
+
+            <label for="skills">Skills:</label>
+            <input type="checkbox" id="skill1" name="skills" value="skill1" required>
+            <label for="skill1">Skill 1</label><br>
+            <input type="checkbox" id="skill2" name="skills" value="skill2" required>
+            <label for="skill2">Skill 2</label><br>
+            <input type="checkbox" id="skill3" name="skills" value="skill3" required>
+            <label for="skill3">Skill 3</label><br>
+
+            <label for="file">Upload Resume:</label>
+            <input type="file" id="file" name="file" required><br>
+
+            <input type="submit" value="Submit Application">
+        </fieldset>
+    </form>
 </body>
 </html>
